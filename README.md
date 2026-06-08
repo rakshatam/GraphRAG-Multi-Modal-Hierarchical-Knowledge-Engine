@@ -40,6 +40,4 @@ This engine is built on a high-performance stack optimized for local/edge deploy
 #### Requirements Installation
 ```bash
 pip install networkx pyvis lancedb sentence-transformers gradio fastapi uvicorn pyngrok pypdf python-docx beautifulsoup4 openai-whisper moviepy
-
-```bash
 !apt-get update && apt-get install -y ffmpeg
