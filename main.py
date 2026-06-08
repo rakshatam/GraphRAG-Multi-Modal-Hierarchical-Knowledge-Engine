@@ -37,7 +37,7 @@ schema = pa.schema([pa.field("vector", pa.list_(pa.float32(), 384)), pa.field("e
 if "knowledge_base" in db.table_names(): db.drop_table("knowledge_base")
 tbl = db.create_table("knowledge_base", schema=schema)
 
-# FIX 3 & 4: Global scaling optimizers
+
 KG = nx.DiGraph()
 DISPLAY_KG = nx.DiGraph() # Cached display graph to prevent O(N) copy on UI refresh
 COMMUNITY_MAP = {}        # O(1) dictionary for macro-community lookups
@@ -103,7 +103,7 @@ def parse_file(file_path):
             if os.path.exists("temp_audio.wav"):
                 os.remove("temp_audio.wav")
     else:
-        # FIX 2: Explicit error for unsupported files instead of a confusing empty string
+        
         return f"ERROR: Unsupported file type '.{ext}'. Please use PDF, DOCX, TXT, HTML, XML, MP3, or MP4."
                 
     return text
@@ -204,21 +204,21 @@ def ingest_data(raw_text=None, file_obj=None):
 
     update_communities()
     
-    # FIX 1: Robust API check instead of fragile string exception matching
+    
     if tbl.count_rows() >= 256:
         try:
             tbl.create_index(metric="cosine")
         except Exception as e:
             print(f"[INDEX WARNING] {e}")
             
-    # FIX 3: Cache the clean visualization graph ONCE during ingestion
+    
     DISPLAY_KG = KG.copy()
     PALETTE = ["#e74c3c", "#3498db", "#2ecc71", "#f39c12", "#9b59b6", "#1abc9c", "#e67e22"]
     for node in DISPLAY_KG.nodes:
         cluster_id = DISPLAY_KG.nodes[node].get('community_id', 'Cluster_0')
         cluster_num = int(cluster_id.split("_")[1])
         DISPLAY_KG.nodes[node]['color'] = PALETTE[cluster_num % len(PALETTE)]
-        # Remove deep context list from the visual DOM memory
+        
         DISPLAY_KG.nodes[node].pop('context', None)
         
     num_communities = len(COMMUNITY_MAP.keys())
