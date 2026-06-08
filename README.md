@@ -37,6 +37,6 @@ This engine is built on a high-performance stack optimized for local/edge deploy
 * A CUDA-enabled GPU (recommended)
 * [Ngrok Authtoken](https://ngrok.com/) (for remote tunnel access)
 
-#### Installation
+#### Requirements Installation
 ```bash
 pip install networkx pyvis lancedb sentence-transformers gradio fastapi uvicorn pyngrok pypdf python-docx beautifulsoup4 openai-whisper moviepy
