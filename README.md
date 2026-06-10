@@ -1,6 +1,6 @@
-# 🚀 True GraphRAG: Multi-Modal Hierarchical Knowledge Engine
+# 🚀 GraphRAG Styled Multi-Modal Hierarchical Knowledge Engine
 
-A production-grade **True GraphRAG** implementation that bridges the gap between unstructured multi-modal data and structured reasoning. Unlike standard VectorRAG, which relies on simple semantic similarity, this engine leverages **Community Detection (Louvain)**, **2-Hop Traversal**, and **Deep Context Synthesis** to retrieve information exactly how humans think: through relationships and macro-concepts.
+A **GraphRAG Styled** implementation that bridges the gap between unstructured multi-modal data and structured reasoning. Unlike standard VectorRAG, which relies on simple semantic similarity, this engine leverages **Community Detection (Louvain)**, **2-Hop Traversal**, and **Deep Context Synthesis** to retrieve information exactly how humans think: through relationships and macro-concepts.
 
 ---
 
