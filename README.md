@@ -41,7 +41,7 @@ Ensure you have Python 3.10+ installed. If you intend to process audio or video 
 ```bash
 # System dependency for media processing (Debian/Ubuntu)
 !apt-get update && apt-get install -y ffmpeg
-!pip install networkx pyvis lancedb sentence-transformers gradio fastapi uvicorn pyngrok pypdf python-docx beautifulsoup4 openai-whisper moviepy loguru gliner rank_bm25 bitsandbytes accelerate
+
 
 # Install Python dependencies
 pip install networkx pyvis lancedb sentence-transformers gradio fastapi uvicorn pyngrok pypdf python-docx beautifulsoup4 openai-whisper moviepy loguru gliner rank_bm25 bitsandbytes accelerate
