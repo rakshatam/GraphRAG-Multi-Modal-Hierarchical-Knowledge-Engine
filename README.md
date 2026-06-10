@@ -7,7 +7,7 @@ A **GraphRAG Styled** implementation that bridges the gap between unstructured m
 ### 🌟 Key Features
 
 * **Multi-Modal Ingestion:** Ingest any document or media. Automatically transcribe audio/video (Whisper), parse PDFs/DOCX, and convert them into a structured knowledge graph.
-* **True GraphRAG Retrieval:** Moves beyond 1-hop vector search. Our retrieval logic uses **2-hop undirected traversal** to find connections between entities that aren't semantically similar but are logically linked.
+* **GraphRAG Retrieval:** Moves beyond 1-hop vector search. Our retrieval logic uses **2-hop undirected traversal** to find connections between entities that aren't semantically similar but are logically linked.
 * **Macro-Community Awareness:** Uses **Louvain Community Detection** to cluster your data. When querying, the engine provides the LLM with the macro-context of the community the entity belongs to, not just the local triplet.
 * **Production-Hardened:** Built to handle memory limits, binary file edge-cases, and database concurrency. Features automated ANN indexing, memory-efficient Pyvis visualization, and robust error handling.
 * **Visualizer:** Interactive force-directed graphs, color-coded by community cluster, rendered directly via embedded IFrames.
